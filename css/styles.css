@@ -203,7 +203,9 @@ $$$$$$$$$$$$$$$$
 
 .nav-link,
 .address-link {
-    transition: 250ms var(--transition-cubic-bezier);
+    transition:
+        color 250ms var(--transition-cubic-bezier),
+        border-color 250ms var(--transition-cubic-bezier);
 }
 
 .nav-link:hover,
@@ -269,7 +271,6 @@ $$$$$$$$$$$$$$$$
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.06em;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
     cursor: pointer;
 
@@ -277,7 +278,9 @@ $$$$$$$$$$$$$$$$
     background-color: var(--color-light-blue);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
-    transition: 250ms var(--transition-cubic-bezier);
+    transition:
+        color 250ms var(--transition-cubic-bezier),
+        border-color 250ms var(--transition-cubic-bezier);
 }
 
 .hero-button:hover,
@@ -337,6 +340,8 @@ $$$$$$$$$$$$$$$$
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     color: var(--color-black-logo);
+
+    cursor: pointer;
 }
 
 .icon-close {
@@ -374,7 +379,9 @@ $$$$$$$$$$$$$$$$
     justify-content: center;
     align-items: center;
 
-    transition: 250ms var(--transition-cubic-bezier);
+    transition:
+        color 250ms var(--transition-cubic-bezier),
+        border-color 250ms var(--transition-cubic-bezier);
 }
 
 .features-container:hover,
@@ -510,7 +517,9 @@ $$$$$$$$$$$$$$$$
     color: var(--color-grey-social-icon);
     background-color: var(--color-white-text);
 
-    transition: 250ms var(--transition-cubic-bezier);
+    transition:
+        color 250ms var(--transition-cubic-bezier),
+        border-color 250ms var(--transition-cubic-bezier);
 }
 
 .social-link:hover,
@@ -541,7 +550,9 @@ $$$$$$$$$$$$$$$$
     width: 170px;
     color: var(--color-grey-border-clients);
 
-    transition: 250ms var(--transition-cubic-bezier);
+    transition:
+        color 250ms var(--transition-cubic-bezier),
+        border-color 250ms var(--transition-cubic-bezier);
 }
 
 .clients-link:hover,
@@ -651,7 +662,9 @@ $$$$$$$$$$$$$$$$
     color: var(--color-white-text);
     background-color: rgba(255, 255, 255, 0.1);
 
-    transition: 250ms var(--transition-cubic-bezier);
+    transition:
+        color 250ms var(--transition-cubic-bezier),
+        border-color 250ms var(--transition-cubic-bezier);
 }
 
 .footer-social-link:hover,
@@ -689,7 +702,9 @@ $$$$$$$$$$$$$$$$
     font-weight: 500;
     border: none;
 
-    transition: 250ms var(--transition-cubic-bezier);
+    transition:
+        color 250ms var(--transition-cubic-bezier),
+        border-color 250ms var(--transition-cubic-bezier);
 }
 
 .portfolio-button:hover,
@@ -710,7 +725,9 @@ $$$$$$$$$$$$$$$$
 }
 
 .portfolio-card {
-    transition: 250ms var(--transition-cubic-bezier);
+    transition:
+        color 250ms var(--transition-cubic-bezier),
+        border-color 250ms var(--transition-cubic-bezier);
 }
 
 .portfolio-card:hover,
@@ -743,7 +760,9 @@ $$$$$$$$$$$$$$$$
     background-color: var(--color-portfolio-label-bg);
 
     transform: translateY(100%);
-    transition: 250ms var(--transition-cubic-bezier);
+    transition:
+        color 250ms var(--transition-cubic-bezier),
+        border-color 250ms var(--transition-cubic-bezier);
 }
 
 .portfolio-card:hover .portfolio-overlay,
