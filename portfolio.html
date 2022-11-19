@@ -32,17 +32,17 @@
     
             <nav class="header-nav">
                 <ul class="nav-list list">
-                    <li>
+                    <li class="nav-item">
                         <a class="nav-link link" href="./index.html">
                             Студія
                         </a>
                     </li>
-                    <li>
+                    <li class="nav-item">
                         <a class="nav-link link current" href="./portfolio.html">
                             Портфоліо
                         </a>
                     </li>
-                    <li>
+                    <li class="nav-item">
                         <a class="nav-link link" href="/">
                             Контакти
                         </a>
@@ -54,7 +54,7 @@
                 <li>
                     <a class="address-link link" href="mailto:info@devstudio.com">
                         <svg class="envelope-icon" width="16" height="12">
-                            <use href="./images/svg/icons.svg#icon-envelope"></use>
+                            <use href="./images/icons.svg#icon-envelope"></use>
                         </svg>
                         info@devstudio.com
                     </a>
@@ -62,7 +62,7 @@
                 <li>
                     <a class="address-link link" href="tel:+380961111111">
                         <svg class="smartphone-icon" width="10" height="16">
-                            <use href="./images/svg/icons.svg#icon-smartphone">
+                            <use href="./images/icons.svg#icon-smartphone">
                             </use>
                         </svg>
                         +38 096 111 11 11
@@ -74,6 +74,7 @@
     <main>
         <section class="portfolio section">
             <div class="container">
+
                     <ul class="portfolio-buttons-list list">
                         <li class="portfolio-buttons-item"><button class="portfolio-button" type="button">Усі</button></li>
                         <li class="portfolio-buttons-item"><button class="portfolio-button" type="button">Веб-сайти</button></li>
@@ -81,66 +82,117 @@
                         <li class="portfolio-buttons-item"><button class="portfolio-button" type="button">Дизайн</button></li>
                         <li class="portfolio-buttons-item"><button class="portfolio-button" type="button">Маркетинг</button></li>
                     </ul>
-                <ul class="portfolio-card-list list">
-                    <li class="portfolio-item">
-                        <img src="./images/portfolio-main/3-faces.webp" alt="три-портрети" width="370" height="294">
-                        <div class="portfolio-wrapper">
-                        <h2 class="portfolio-card-title">Технокряк</h2>
-                        <p class="portfolio-card-text">Веб-сайт</p>
+
+                <ul class="portfolio-cards list">
+                    <li class="portfolio-card">
+
+                        <div class="portfolio-thumb">
+                            <img src="./images/portfolio-main/3-faces.webp" alt="три-портрети" width="370" height="294">
+                        
+                            <div class="portfolio-overlay">
+                                Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу
+                            </div>
                         </div>
+
+                        <div class="portfolio-wrapper">
+                            <h2 class="portfolio-card-title">Технокряк</h2>
+                            <p class="portfolio-card-text">Веб-сайт</p>
+                        </div>
+
                     </li>
-                    <li class="portfolio-item">
-                        <img src="./images/portfolio-main/basketball.webp" alt="баскетбол" width="370" height="294">
+                    <li class="portfolio-card">
+                        <div class="portfolio-thumb">
+                            <img src="./images/portfolio-main/basketball.webp" alt="баскетбол" width="370" height="294">
+                            <div class="portfolio-overlay">
+                                Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу
+                            </div>
+                        </div>
+                        
                         <div class="portfolio-wrapper">
                         <h2 class="portfolio-card-title">Постер New Orlean vs Golden Star</h2>
                         <p class="portfolio-card-text"">Дизайн</p>
                         </div>
                     </li>
-                    <li class="portfolio-item">
-                        <img src="./images/portfolio-main/seafood.webp" alt="морська-їжа" width="370" height="294">
-                        <div class="portfolio-wrapper">
+                    <li class="portfolio-card">
+                        <div class="portfolio-thumb">
+                            <img src="./images/portfolio-main/seafood.webp" alt="морська-їжа" width="370" height="294">
+                            <div class="portfolio-overlay">
+                                Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу
+                            </div>
+                        </div>
+                            <div class="portfolio-wrapper">
                         <h2 class="portfolio-card-title">Ресторан Seafood</h2>
                         <p class="portfolio-card-text"">Додаток</p>
                         </div>
                     </li>
-                    <li class="portfolio-item">
-                        <img src="./images/portfolio-main/headfones.webp" alt="навушники" width="370" height="294">
-                        <div class="portfolio-wrapper">
+                    <li class="portfolio-card">
+                        <div class="portfolio-thumb">
+                            <img src="./images/portfolio-main/headfones.webp" alt="навушники" width="370" height="294">
+                            <div class="portfolio-overlay">
+                                Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу
+                            </div>
+                        </div>
+                            <div class="portfolio-wrapper">
                         <h2 class="portfolio-card-title">Проєкт Prime</h2>
                         <p class="portfolio-card-text"">Маркетинг</p>
                         </div>
                     </li>
-                    <li class="portfolio-item">
-                        <img src="./images/portfolio-main/blocks.webp" alt="коробки" width="370" height="294">
-                        <div class="portfolio-wrapper">
+                    <li class="portfolio-card">
+                        <div class="portfolio-thumb">
+                            <img src="./images/portfolio-main/blocks.webp" alt="коробки" width="370" height="294">
+                            <div class="portfolio-overlay">
+                                Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу
+                            </div>
+                        </div>
+                            <div class="portfolio-wrapper">
                         <h2 class="portfolio-card-title">Проєкт Boxes</h2>
                         <p class="portfolio-card-text"">Додаток</p>
                         </div>
                     </li>
-                    <li class="portfolio-item">
-                        <img src="./images/portfolio-main/screen.webp" alt="екран" width="370" height="294">
-                        <div class="portfolio-wrapper">
+                    <li class="portfolio-card">
+                        <div class="portfolio-thumb">
+                            <img src="./images/portfolio-main/screen.webp" alt="екран" width="370" height="294">
+                            <div class="portfolio-overlay">
+                                Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу
+                            </div>
+                        </div>
+                            <div class="portfolio-wrapper">
                         <h2 class="portfolio-card-title">Inspiration has no Borders</h2>
                         <p class="portfolio-card-text"">Веб-сайт</p>
                         </div>
                     </li>
-                    <li class="portfolio-item">
-                        <img src="./images/portfolio-main/journal.webp" alt="журнал" width="370" height="294">
-                        <div class="portfolio-wrapper">
+                    <li class="portfolio-card">
+                        <div class="portfolio-thumb">
+                            <img src="./images/portfolio-main/journal.webp" alt="журнал" width="370" height="294">
+                            <div class="portfolio-overlay">
+                                Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу
+                            </div>
+                        </div>
+                            <div class="portfolio-wrapper">
                         <h2 class="portfolio-card-title">Видання Limited Edition</h2>
                         <p class="portfolio-card-text"">Дизайн</p>
                         </div>
                     </li>
-                    <li class="portfolio-item">
-                        <img src="./images/portfolio-main/etiquette.webp" alt="етикетка" width="370" height="294">
-                        <div class="portfolio-wrapper">
+                    <li class="portfolio-card">
+                        <div class="portfolio-thumb">
+                            <img src="./images/portfolio-main/etiquette.webp" alt="етикетка" width="370" height="294">
+                            <div class="portfolio-overlay">
+                                Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу
+                            </div>
+                        </div>
+                            <div class="portfolio-wrapper">
                         <h2 class="portfolio-card-title">Проєкт LAB</h2>
                         <p class="portfolio-card-text"">Маркетинг</p>
                         </div>
                     </li>
-                    <li class="portfolio-item">
-                        <img src="./images/portfolio-main/notebook.webp" alt="ноутбук" width="370" height="294">
-                        <div class="portfolio-wrapper">
+                    <li class="portfolio-card">
+                        <div class="portfolio-thumb">
+                            <img src="./images/portfolio-main/notebook.webp" alt="ноутбук" width="370" height="294">
+                            <div class="portfolio-overlay">
+                                Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу
+                            </div>
+                        </div>
+                            <div class="portfolio-wrapper">
                         <h2 class="portfolio-card-title">Growing Business</h2>
                         <p class="portfolio-card-text"">Додаток</p>
                         </div>

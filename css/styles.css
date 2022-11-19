@@ -2,6 +2,8 @@
 
     --color-light-blue: #2196F3;
 
+    --color-portfolio-label-bg: rgba(33, 150, 243, 0.9);
+
     --color-blue-section: #2F303A;
 
     --color-black-h: #212121;
@@ -19,7 +21,12 @@
 
     --color-grey-social-icon: #AFB1B8;
 
+    --color-modal-bg: rgba(0, 0, 0, 0.2);
 
+    --color-label-bg: rgba(47, 48, 58, 0.8);
+
+
+    --transition-cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -153,6 +160,22 @@ $$$$$$$$$$$$$$$$
     color: var(--color-light-blue);
 }
 
+.nav-list .nav-item {
+    position: relative;
+}
+
+.nav-list .current::after {
+    content: "";
+    position: absolute;
+
+    bottom: -1px;
+
+    background-color: var(--color-light-blue);
+    border-radius: 2px;
+    width: 100%;
+    height: 4px;
+}
+
 .nav-link {
     display: flex;
     align-items: center;
@@ -176,6 +199,11 @@ $$$$$$$$$$$$$$$$
     letter-spacing: 0.02em;
 
     color: var(--color-grey-p);
+}
+
+.nav-link,
+.address-link {
+    transition: 250ms var(--transition-cubic-bezier);
 }
 
 .nav-link:hover,
@@ -248,11 +276,82 @@ $$$$$$$$$$$$$$$$
     color: var(--color-white-text);
     background-color: var(--color-light-blue);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+    transition: 250ms var(--transition-cubic-bezier);
 }
 
 .hero-button:hover,
 .hero-button:focus {
     background-color: #188CE8;
+}
+
+.backdrop {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-modal-bg);
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    opacity: 1;
+}
+
+.modal {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 528px;
+    height: 581px;
+
+    opacity: 1;
+
+    background-color: var(--color-white-text);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+    transition:
+        opacity 250ms cubic-bezier(.17, .67, .83, .67)
+}
+
+.button-close-modal {
+    position: absolute;
+
+    top: 9px;
+    right: 7px;
+
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--color-white-text);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    color: var(--color-black-logo);
+}
+
+.icon-close {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+
+.is-hidden {
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.is-hidden .modal {
+    opacity: 0;
 }
 
 /*++++++++++hero++++++++++*/
@@ -274,6 +373,8 @@ $$$$$$$$$$$$$$$$
     margin-bottom: 30px;
     justify-content: center;
     align-items: center;
+
+    transition: 250ms var(--transition-cubic-bezier);
 }
 
 .features-container:hover,
@@ -313,14 +414,39 @@ $$$$$$$$$$$$$$$$
     padding-top: 0;
 }
 
-.about-us-title {}
-
 .about-us-list {
     display: flex;
     gap: 30px;
 }
 
-.about-us-item {}
+.about-us-wrapper {
+    position: relative;
+}
+
+.about-us-label {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 70px;
+    background-color: var(--color-label-bg);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-us-description {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: var(--color-white-text);
+}
 
 /*++++++++++about-us++++++++++*/
 
@@ -383,6 +509,8 @@ $$$$$$$$$$$$$$$$
     border-radius: 50%;
     color: var(--color-grey-social-icon);
     background-color: var(--color-white-text);
+
+    transition: 250ms var(--transition-cubic-bezier);
 }
 
 .social-link:hover,
@@ -412,6 +540,8 @@ $$$$$$$$$$$$$$$$
     height: 92px;
     width: 170px;
     color: var(--color-grey-border-clients);
+
+    transition: 250ms var(--transition-cubic-bezier);
 }
 
 .clients-link:hover,
@@ -520,6 +650,8 @@ $$$$$$$$$$$$$$$$
     border-radius: 50%;
     color: var(--color-white-text);
     background-color: rgba(255, 255, 255, 0.1);
+
+    transition: 250ms var(--transition-cubic-bezier);
 }
 
 .footer-social-link:hover,
@@ -535,18 +667,94 @@ $$$$$$$$$$$$$$$$
 
 /*++++++++++footer++++++++++*/
 
+
+
 /*===========portfolio-page==========*/
 
-/*++++++++++portfolio-cards++++++++++*/
 
+.portfolio-buttons-list {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 50px;
+}
+
+.portfolio-button {
+    padding: 6px 22px;
+    font-family: inherit;
+    background-color: var(--color-grey-button);
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 1.62;
+    font-weight: 500;
+    border: none;
+
+    transition: 250ms var(--transition-cubic-bezier);
+}
+
+.portfolio-button:hover,
+.portfolio-button:focus {
+    background-color: var(--color-light-blue);
+    color: var(--color-white-text);
+    cursor: pointer;
+    box-shadow:
+        0px 3px 1px rgba(0, 0, 0, 0.1),
+        0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.portfolio-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.portfolio-card {
+    transition: 250ms var(--transition-cubic-bezier);
+}
+
+.portfolio-card:hover,
+.portfolio-card:focus {
+    box-shadow:
+        0px 1px 1px rgba(0, 0, 0, 0.12),
+        0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.portfolio-thumb {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    padding: 63px 24px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.55;
+    letter-spacing: 0.03em;
+
+    color: var(--color-white-text);
+    background-color: var(--color-portfolio-label-bg);
+
+    transform: translateY(100%);
+    transition: 250ms var(--transition-cubic-bezier);
+}
+
+.portfolio-card:hover .portfolio-overlay {
+    transform: translateY(0%);
+    opacity: 1;
+}
 
 .portfolio-wrapper {
     padding: 20px 24px;
     border: 1px solid #EEEEEE;
     border-top: none;
-    /*width:370px; - збільшує висоту */
-    /* без width:370px; має ширину 404px; Не розумію, бо воно ж 
-    box-sizing:border-box і не повинно міняти розмір */
 }
 
 .portfolio-card-title {
@@ -569,53 +777,10 @@ $$$$$$$$$$$$$$$$
 /*++++++++++portfolio-cards++++++++++*/
 
 /*++++++++++button++++++++++*/
-.portfolio-button {
-    padding: 6px 22px;
-    font-family: inherit;
-    background-color: var(--color-grey-button);
-    border-radius: 4px;
-    font-size: 16px;
-    line-height: 1.62;
-    font-weight: 500;
-    border: none;
-}
-
-.portfolio-item:hover,
-.portfolio-item:focus {
-    box-shadow:
-        0px 1px 1px rgba(0, 0, 0, 0.12),
-        0px 4px 4px rgba(0, 0, 0, 0.06),
-        1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
-.portfolio-button:hover,
-.portfolio-button:focus {
-    background-color: var(--color-light-blue);
-    color: var(--color-white-text);
-    cursor: pointer;
-    box-shadow:
-        0px 3px 1px rgba(0, 0, 0, 0.1),
-        0px 1px 2px rgba(0, 0, 0, 0.08),
-        0px 2px 2px rgba(0, 0, 0, 0.12);
-}
-
 
 /*++++++++++button++++++++++*/
 
 /*++++++++++portfolio-flex++++++++++*/
 
-.portfolio-buttons-list {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    margin-bottom: 50px;
-}
-
-.portfolio-card-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-
-}
 
 /*++++++++++portfolio-flex++++++++++*/
