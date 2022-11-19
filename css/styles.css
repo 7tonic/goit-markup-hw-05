@@ -746,7 +746,8 @@ $$$$$$$$$$$$$$$$
     transition: 250ms var(--transition-cubic-bezier);
 }
 
-.portfolio-card:hover .portfolio-overlay {
+.portfolio-card:hover .portfolio-overlay,
+.portfolio-card:focus .portfolio-overlay {
     transform: translateY(0%);
     opacity: 1;
 }
